@@ -17,6 +17,7 @@ namespace AnimalRecognize
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Title = "Select Input File ";
+            dlg.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
@@ -24,6 +25,8 @@ namespace AnimalRecognize
                 txtInput.Text = FilePath;
                 pbInput.Image = Image.FromFile(FilePath);
                 btnRecognize.Enabled = true;
+                txtResult.Clear();
+                txtScore.Clear();
             }
             else
             {

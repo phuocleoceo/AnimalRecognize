@@ -9,6 +9,10 @@
     <ApplicationIcon>pet-house.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>2</WarningLevel>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\AnimalRecognizeML.Model\AnimalRecognizeML.Model.csproj" />
   </ItemGroup>
